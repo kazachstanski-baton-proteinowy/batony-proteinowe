@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash, url_for
+from flask import Flask, render_template, request, redirect, flash, url_for, session
 import re
 
 app = Flask(__name__)
@@ -43,6 +43,7 @@ def kontakt():
         }
         is_valid, errors = validate_form_data(data)
         if is_valid:
+            session['messages_sent'] = session.get('messages_sent', 0) + 1
             flash('Wiadomosc zostala wyslana!', 'success')
             return redirect(url_for('kontakt'))
         else:
