@@ -4,7 +4,7 @@ import re
 app = Flask(__name__)
 app.secret_key = 'tajny_klucz'
 
-EMAIL_REGEX = r"[^@]+@[^@]+\.[^@]+"
+EMAIL_REGEX  = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
 
 def validate_form_data(data):
     errors = {}
