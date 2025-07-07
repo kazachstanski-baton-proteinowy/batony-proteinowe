@@ -77,7 +77,7 @@ produkty = [
 ---
 ## Nowe funkcje
 
-- Strona główna śledzi liczbę odwiedzin użytkownika w sesji.
+Strona główna pokazuje liczbę odwiedzin użytkownika w sesji.
 
 ---
 
