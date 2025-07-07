@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Batony Proteinowe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .product {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Batony Proteinowe</h1>
+    {% for produkt in produkty %}
+    <div class="product">
+        <h2>{{ produkt.nazwa }}</h2>
+        <p>{{ produkt.opis }}</p>
+        <img src="{{ url_for('static', filename=produkt.obraz) }}" alt="{{ produkt.nazwa }}">
+    </div>
+    {% endfor %}
+</body>
+</html>
