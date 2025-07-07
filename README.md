@@ -74,6 +74,10 @@ produkty = [
     }
 ]
 ```
+---
+## Nowe funkcje
+
+- Strona główna śledzi liczbę odwiedzin użytkownika w sesji.
 
 ---
 

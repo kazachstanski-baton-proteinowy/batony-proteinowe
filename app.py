@@ -19,6 +19,8 @@ def validate_form_data(data):
 
 @app.route('/')
 def index():
+    visits = session.get('visits', 0) + 1
+    session['visits'] = visits
     produkty = [
         {
             'nazwa': 'Baton Proteinowy XYZ',
@@ -31,7 +33,7 @@ def index():
             'obraz': 'images/baton3.jpg'
         }
     ]
-    return render_template('index.html', produkty=produkty)
+    return render_template('index.html', produkty=produkty, visits=visits)
 
 @app.route('/kontakt', methods=['GET', 'POST'])
 def kontakt():

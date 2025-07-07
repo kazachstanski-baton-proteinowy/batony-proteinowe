@@ -59,6 +59,14 @@ class TestRoutes(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Skontaktuj si', response.data)
 
+    def test_index_view_increments_visit_count(self):
+        with self.client.session_transaction() as sess:
+            sess['visits'] = 0
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Odwiedziles strone 1 razy', response.data)
+
+
 class TestContactPOST(unittest.TestCase):
 
     def setUp(self):
