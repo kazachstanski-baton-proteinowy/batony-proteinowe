@@ -65,9 +65,36 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+        nav {
+            background-color: #007BFF;
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Strona główna</a></li>
+            <li><a href="{{ url_for('kontakt') }}">Kontakt</a></li>
+        </ul>
+    </nav>
     <form>
         <h1>Skontaktuj się z nami</h1>
 
