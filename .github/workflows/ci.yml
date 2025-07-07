@@ -35,7 +35,7 @@ jobs:
       - name: Check code quality
         run: |
           pip install flake8
-          flake8 app/
+          flake8 .
 
       - name: Build Docker image
         run: docker build -t my-flask-app .
