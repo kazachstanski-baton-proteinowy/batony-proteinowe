@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b90dc11-ba95-445c-b10b-ce8156597ee8" name="Changes" comment="dodano styl do kontaktu">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="8b90dc11-ba95-445c-b10b-ce8156597ee8" name="Changes" comment="Zmodyfikowano naglowek" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,26 +21,26 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature/header-design-b" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "kazachstanski-baton-proteinowy"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kazachstanski-baton-proteinowy&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kazachstanski-baton-proteinowy/batony-proteinowe.git",
-    "accountId": "0d2f4850-294c-45c0-a21d-fcc5e6363c0d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kazachstanski-baton-proteinowy/batony-proteinowe.git&quot;,
+    &quot;accountId&quot;: &quot;0d2f4850-294c-45c0-a21d-fcc5e6363c0d&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2zYFmeeAqRk9Jz1uP4zJDP3spEx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,7 +53,7 @@
     "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/navigation",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/vdi-student/PycharmProjects/baton/static/images"
   }
 }]]></component>
@@ -137,7 +133,23 @@
       <option name="project" value="LOCAL" />
       <updated>1751903537672</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Zmodyfikowano naglowek">
+      <option name="closed" value="true" />
+      <created>1751904939676</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751904939676</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Zmodyfikowano naglowek">
+      <option name="closed" value="true" />
+      <created>1751904988996</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751904988996</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +170,7 @@
     <MESSAGE value="Dodano CONTRIBUTING.md" />
     <MESSAGE value="dodano style.css" />
     <MESSAGE value="dodano styl do kontaktu" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodano styl do kontaktu" />
+    <MESSAGE value="Zmodyfikowano naglowek" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zmodyfikowano naglowek" />
   </component>
 </project>
