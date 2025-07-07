@@ -23,6 +23,18 @@
             max-width: 100%;
             border-radius: 5px;
         }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -32,6 +44,8 @@
         <h2>{{ produkt.nazwa }}</h2>
         <p>{{ produkt.opis }}</p>
         <img src="{{ url_for('static', filename=produkt.obraz) }}" alt="{{ produkt.nazwa }}">
+        <br>
+        <a href="https://olimpstore.pl/produkty/zdrowa-zywnosc-i-przekaski/batony-proteinowe?gad_source=1&gad_campaignid=21809828091&gbraid=0AAAAABm7qrYVANxOI6MS14W20LtDo8z8g&gclid=CjwKCAjw4K3DBhBqEiwAYtG_9C__3QczsIYE1eYgBgexGEBnjKmOAARQ9P82Dgu36MYaWD7nbSSwdRoCt30QAvD_BwE" target="_blank" class="btn">Kup teraz</a>
     </div>
     {% endfor %}
 </body>
