@@ -30,7 +30,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest --cov=app tests/
+          pytest
 
       - name: Check code quality
         run: |
