@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b90dc11-ba95-445c-b10b-ce8156597ee8" name="Changes" comment="Dodanie licznika wysylania wiadomosci">
+    <list default="true" id="8b90dc11-ba95-445c-b10b-ce8156597ee8" name="Changes" comment="Zamiana email na user_email i message na content wszedzie">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_contact_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_contact_form.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +58,7 @@
     "Python.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/licznik-odwiedzin",
     "last_opened_file_path": "C:/Users/vdi-student/PycharmProjects/baton/static/images"
   }
 }]]></component>
@@ -178,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751907208690</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Zamiana email na user_email i message na content wszedzie">
+      <option name="closed" value="true" />
+      <created>1751907739563</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751907739563</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +211,7 @@
     <MESSAGE value="Dodano testy jednostkowe" />
     <MESSAGE value="Poprawiono regexa do sprawdzania maila" />
     <MESSAGE value="Dodanie licznika wysylania wiadomosci" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie licznika wysylania wiadomosci" />
+    <MESSAGE value="Zamiana email na user_email i message na content wszedzie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zamiana email na user_email i message na content wszedzie" />
   </component>
 </project>

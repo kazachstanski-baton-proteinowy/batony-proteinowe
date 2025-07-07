@@ -74,6 +74,10 @@ produkty = [
     }
 ]
 ```
+---
+## Nowe funkcje
+
+Strona główna pokazuje liczbę odwiedzin użytkownika w sesji.
 
 ---
 
