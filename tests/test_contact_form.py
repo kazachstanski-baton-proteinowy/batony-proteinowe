@@ -6,8 +6,8 @@ class TestContactFormValidation(unittest.TestCase):
     def test_valid_data(self):
         data = {
             'name': 'Jan',
-            'email': 'jan@example.com',
-            'message': 'To jest testowa wiadomość.'
+            'user_email': 'jan@example.com',
+            'content': 'To jest testowa wiadomość.'
         }
         is_valid, errors = validate_form_data(data)
         self.assertTrue(is_valid)
@@ -16,8 +16,8 @@ class TestContactFormValidation(unittest.TestCase):
     def test_missing_name(self):
         data = {
             'name': '',
-            'email': 'jan@example.com',
-            'message': 'Treść'
+            'user_email': 'jan@example.com',
+            'content': 'Treść'
         }
         is_valid, errors = validate_form_data(data)
         self.assertFalse(is_valid)
@@ -26,22 +26,22 @@ class TestContactFormValidation(unittest.TestCase):
     def test_invalid_email(self):
         data = {
             'name': 'Jan',
-            'email': 'niepoprawny-email',
-            'message': 'Treść'
+            'user_email': 'niepoprawny-email',
+            'content': 'Treść'
         }
         is_valid, errors = validate_form_data(data)
         self.assertFalse(is_valid)
-        self.assertIn('email', errors)
+        self.assertIn('user_email', errors)
 
     def test_empty_message(self):
         data = {
             'name': 'Jan',
-            'email': 'jan@example.com',
-            'message': ''
+            'user_email': 'jan@example.com',
+            'content': ''
         }
         is_valid, errors = validate_form_data(data)
         self.assertFalse(is_valid)
-        self.assertIn('message', errors)
+        self.assertIn('content', errors)
 
 
 class TestRoutes(unittest.TestCase):
@@ -68,8 +68,8 @@ class TestContactPOST(unittest.TestCase):
     def test_contact_form_valid_post(self):
         response = self.client.post('/kontakt', data={
             'name': 'Jan',
-            'email': 'jan@example.com',
-            'message': 'Wiadomość testowa'
+            'user_email': 'jan@example.com',
+            'content': 'Wiadomość testowa'
         }, follow_redirects=True)
 
         self.assertEqual(response.status_code, 200)
@@ -78,11 +78,11 @@ class TestContactPOST(unittest.TestCase):
     def test_contact_form_invalid_post(self):
         response = self.client.post('/kontakt', data={
             'name': '',
-            'email': 'zly_email',
-            'message': ''
+            'user_email': 'zly_email',
+            'content': ''
         }, follow_redirects=True)
 
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Imie jest wymagane', response.data)
-        self.assertIn(b'email: Poprawny email jest wymagany.', response.data)
-        self.assertIn(b'message: Wiadomosc nie moze byc pusta.', response.data)
+        self.assertIn(b'user_email: Poprawny email jest wymagany.', response.data)
+        self.assertIn(b'content: Wiadomosc nie moze byc pusta.', response.data)

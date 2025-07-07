@@ -10,10 +10,10 @@ def validate_form_data(data):
     errors = {}
     if not data.get('name'):
         errors['name'] = 'Imie jest wymagane.'
-    if not data.get('email') or not re.match(EMAIL_REGEX, data['email']):
-        errors['email'] = 'Poprawny email jest wymagany.'
-    if not data.get('message'):
-        errors['message'] = 'Wiadomosc nie moze byc pusta.'
+    if not data.get('user_email') or not re.match(EMAIL_REGEX, data['user_email']):
+        errors['user_email'] = 'Poprawny email jest wymagany.'
+    if not data.get('content'):
+        errors['content'] = 'Wiadomosc nie moze byc pusta.'
 
     return (len(errors) == 0), errors
 
@@ -38,8 +38,8 @@ def kontakt():
     if request.method == 'POST':
         data = {
             'name': request.form.get('name', '').strip(),
-            'email': request.form.get('email', '').strip(),
-            'message': request.form.get('message', '').strip()
+            'user_email': request.form.get('user_email', '').strip(),
+            'content': request.form.get('content', '').strip()
         }
         is_valid, errors = validate_form_data(data)
         if is_valid:
