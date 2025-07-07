@@ -65,5 +65,10 @@ def kontakt():
     return render_template('contact.html', data={})
 
 
+@app.route("/health")
+def health():
+    return "OK", 200
+
+
 if __name__ == '__main__':
     app.run(debug=True)
