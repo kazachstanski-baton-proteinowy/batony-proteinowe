@@ -1,6 +1,7 @@
 import unittest
 from app import app, validate_form_data
 
+
 class TestContactFormValidation(unittest.TestCase):
 
     def test_valid_data(self):
@@ -92,5 +93,7 @@ class TestContactPOST(unittest.TestCase):
 
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Imie jest wymagane', response.data)
-        self.assertIn(b'user_email: Poprawny email jest wymagany.', response.data)
-        self.assertIn(b'content: Wiadomosc nie moze byc pusta.', response.data)
+        self.assertIn(b'user_email: Poprawny email jest wymagany.',
+                      response.data)
+        self.assertIn(b'content: Wiadomosc nie moze byc pusta.',
+                      response.data)
