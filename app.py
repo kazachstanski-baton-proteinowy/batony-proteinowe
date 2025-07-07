@@ -1,21 +1,25 @@
-from flask import Flask, render_template, request, redirect, flash, url_for, session
+from flask import (Flask, render_template, request,
+                   redirect, flash, url_for, session)
 import re
 
 app = Flask(__name__)
 app.secret_key = 'tajny_klucz'
 
-EMAIL_REGEX  = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+EMAIL_REGEX = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+
 
 def validate_form_data(data):
     errors = {}
     if not data.get('name'):
         errors['name'] = 'Imie jest wymagane.'
-    if not data.get('user_email') or not re.match(EMAIL_REGEX, data['user_email']):
+    if not data.get('user_email') or not re.match(EMAIL_REGEX,
+                                                  data['user_email']):
         errors['user_email'] = 'Poprawny email jest wymagany.'
     if not data.get('content'):
         errors['content'] = 'Wiadomosc nie moze byc pusta.'
 
     return (len(errors) == 0), errors
+
 
 @app.route('/')
 def index():
@@ -24,16 +28,20 @@ def index():
     produkty = [
         {
             'nazwa': 'Baton Proteinowy XYZ',
-            'opis': 'Baton XYZ zawiera 20g białka i idealnie nadaje się po treningu.',
+            'opis': 'Baton XYZ zawiera 20g białka '
+                    'i idealnie nadaje się po treningu.',
             'obraz': 'images/baton2.jpg'
         },
         {
             'nazwa': 'Baton Proteinowy ABC',
-            'opis': 'Baton ABC to zdrowa przekąska z dodatkiem orzechów i kakao.',
+            'opis': 'Baton ABC to zdrowa przekąska '
+                    'z dodatkiem orzechów i kakao.',
             'obraz': 'images/baton3.jpg'
         }
     ]
-    return render_template('index.html', produkty=produkty, visits=visits)
+    return render_template('index.html',
+                           produkty=produkty, visits=visits)
+
 
 @app.route('/kontakt', methods=['GET', 'POST'])
 def kontakt():
@@ -51,9 +59,11 @@ def kontakt():
         else:
             for field, msg in errors.items():
                 flash(f"{field}: {msg}", 'error')
-            return render_template('contact.html', data=data)
+            return render_template('contact.html',
+                                   data=data)
 
     return render_template('contact.html', data={})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
